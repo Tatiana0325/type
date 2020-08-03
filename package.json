@@ -1,0 +1,43 @@
+{
+  "name": "type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "lint": "eslint .",
+    "watch": "tsc -w",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "preshow:coverage": "npm run coverage",
+    "preshow:dist": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tatiana0325/type.git"
+  },
+  "author": "Tatiana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tatiana0325/type/issues"
+  },
+  "homepage": "https://github.com/Tatiana0325/type#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@types/jest": "^26.0.8",
+    "babel-jest": "^26.2.2",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.2.0",
+    "jest": "^26.2.2",
+    "ts-jest": "^26.1.4",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5"
+  }
+}
