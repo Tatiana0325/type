@@ -11,7 +11,7 @@ export default class Cart {
         return[...this._items];
     }
 
-    sum(): any {
+    sum(): number {
         let arr = this.items; 
         let sum = arr.reduce((result: number, arr) => {
             return result + arr.price;
@@ -20,7 +20,7 @@ export default class Cart {
         return sum;
     }
 
-    sumSale(discount: number): any {
+    sumSale(discount: number): number {
         let sum = this.sum();
         if ((discount > 0) && (discount < 1)) {
             return sum * (1 - discount);
@@ -29,15 +29,8 @@ export default class Cart {
         }
     }
 
-    delete(id: number): any {
-        let arr = this.items;
-        this._items = [];
-        arr.map((item) => {
-            if(item.id != id) {
-                this.add(item);
-            }
-        })
-
+    delete(id: number): Buyalbe[] {
+        this._items = this._items.filter(item => item.id !== id);
         return this.items;
     }
 }
